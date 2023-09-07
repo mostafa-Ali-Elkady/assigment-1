@@ -1,0 +1,25 @@
+footer {
+    background-color: var(--sec-color);
+    padding: 40px;
+}
+.bottom-footer {
+    background-color: #1a252f;
+}
+.footer ul li{
+   width: 40px;
+   height: 40px;
+   border: 1px solid #fff;
+   border-radius: 50%;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   margin-right: 0.8rem;
+   cursor: pointer;
+   transition: 0.6s;
+}
+.footer ul li:hover {
+    background-color: #fff;
+}
+.footer ul li:hover svg {
+    color:var(--sec-color)
+}

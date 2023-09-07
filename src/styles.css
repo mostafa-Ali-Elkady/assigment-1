@@ -1,0 +1,13 @@
+/* You can add glbal styles to this file, and also import other style files */
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap");
+
+body {
+  font-family: system-ui, -apple-system, "Roboto", sans-serif;
+}
+:root {
+  --main-color: #1abc9c;
+  --sec-color: #2c3e50;
+}
+section {
+min-height: 100vh;
+}
