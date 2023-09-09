@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { Title } from '@angular/platform-browser';
+
 
 @Component({
   selector: 'app-home',
@@ -7,7 +9,9 @@ import { Component } from '@angular/core';
 })
 export class HomeComponent {
   dynamicColor:string;
-  constructor(){
-    this.dynamicColor= "#fff"
+  constructor(private titleService: Title){
+    this.dynamicColor= "#fff";
+    titleService.setTitle("Home");
+
   }
 }

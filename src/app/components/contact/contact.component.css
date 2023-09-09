@@ -1,0 +1,33 @@
+
+form label {
+    color: var(--main-color);
+    font-weight: 500;
+}
+form button {
+    background-color: var(--main-color);
+}
+input, label {
+    transition: 0.5s;
+}
+.__top-40 {
+    top: 40px;
+}
+input.form-control:focus {
+    box-shadow: none;
+}
+@media screen and (max-width:768px) {
+    form {
+
+        width: 100% !important;
+        padding-inline: 1rem;
+    }
+    
+}
+@media screen and (min-width:769px) {
+    form {
+
+        width: 60% !important;
+        padding-inline: 1rem;
+    }
+    
+}

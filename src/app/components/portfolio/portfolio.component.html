@@ -1,43 +1,114 @@
 <section
-  class="d-flex justify-content-center align-items-center text-center portfolio "
+  class="d-flex justify-content-center align-items-center text-center portfolio"
 >
-
-<div class="container ">
+  <div class="container">
     <div class="portfolio-heading">
-        <h2 class="text-uppercase fw-bold fs-1">PORTFOLIO COMPONENT</h2>
-        <app-lines [customColor] ="dynamicColor"></app-lines>
+      <h2 class="text-uppercase fw-bold fs-1">PORTFOLIO COMPONENT</h2>
+      <app-lines [customColor]="dynamicColor"></app-lines>
     </div>
-    <div class="row g-5 my-4">
-        <div class="col-md-4">
-          <div class="image">
-            <img src="assets/imgs/port1.png" alt="image1" class="img-fluid rounded" />
-          </div>
-        </div>
-        <div class="col-md-4">
-          <div class="image">
-            <img src="assets/imgs/port2.png" alt="image2" class="img-fluid rounded" />
-          </div>
-        </div>
-        <div class="col-md-4">
-          <div class="image">
-            <img src="assets/imgs/port3.png" alt="image3" class="img-fluid rounded" />
-          </div>
-        </div>
-        <div class="col-md-4">
-          <div class="image">
-            <img src="assets/imgs/port1.png" alt="image1" class="img-fluid rounded" />
-          </div>
-        </div>
-        <div class="col-md-4">
-          <div class="image">
-            <img src="assets/imgs/port2.png" alt="image2" class="img-fluid rounded" />
-          </div>
-        </div>
-        <div class="col-md-4">
-          <div class="image">
-            <img src="assets/imgs/port3.png" alt="image3" class="img-fluid rounded" />
+    <div class="row g-5 ">
+      <div class="col-md-4 position-relative">
+        <div class="image position-relative overflow-hidden">
+          <img
+            src="assets/imgs/port1.png"
+            alt="image1"
+            class="img-fluid rounded"
+          />
+          <div
+            class="overlay position-absolute rounded"
+            (click)="getImageSrc($event)"
+          >
+            +
           </div>
         </div>
       </div>
-</div>
+      <div class="col-md-4">
+        <div
+          class="image position-relative overflow-hidden"
+          src="assets/imgs/port2.png"
+        >
+          <img
+            src="assets/imgs/port2.png"
+            alt="image2"
+            class="img-fluid rounded"
+          />
+          <div
+            class="overlay position-absolute rounded"
+            (click)="getImageSrc($event)"
+          >
+            +
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="image position-relative overflow-hidden">
+          <img
+            src="assets/imgs/port3.png"
+            alt="image3"
+            class="img-fluid rounded"
+          />
+          <div
+            class="overlay position-absolute rounded"
+            (click)="getImageSrc($event)"
+          >
+            +
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="image position-relative overflow-hidden">
+          <img
+            src="assets/imgs/port1.png"
+            alt="image1"
+            class="img-fluid rounded"
+          />
+          <div
+            class="overlay position-absolute rounded"
+            (click)="getImageSrc($event)"
+          >
+            +
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="image position-relative overflow-hidden">
+          <img
+            src="assets/imgs/port2.png"
+            alt="image2"
+            class="img-fluid rounded"
+          />
+          <div
+            class="overlay position-absolute rounded"
+            (click)="getImageSrc($event)"
+          >
+            +
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="image position-relative overflow-hidden">
+          <img
+            src="assets/imgs/port3.png"
+            alt="image3"
+            class="img-fluid rounded"
+          />
+          <div
+            class="overlay position-absolute rounded"
+            (click)="getImageSrc($event)"
+          >
+            +
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- show certain image  -->
+  <div
+    [ngClass]="clickedSrc ? 'd-block' : 'd-none'"
+    (click)="toggleImage()"
+    class="interface position-fixed start-0 w-100 top-0 h-100 bg-primary bg-opacity-25 d-flex justify-content-center align-items-center"
+  >
+    <img src="{{clickedSrc}}" alt="image" width="600" class="rounded"/>
+  </div>
 </section>
